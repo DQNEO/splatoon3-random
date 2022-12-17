@@ -4,8 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
   <style>
-    body {
-	font-size:x-large;
+    #container {
+        width:400px;
+	font-size:larger;
+        margin:0.8em;
+    }
+    #weapon {
+        word-wrap: break-word;
+        font-size:1.5em;
+    }
+    #retry {
+        padding:0.5em;
     }
   </style>
     <title>スプラトゥーン3 ランダムブキ選択</title>
@@ -13,10 +22,12 @@
     
 </head>
 <body>
-  おすすめのブキは、
-  <h1 id="weapon"></h1>
-  　です。
+<div id="container">
+おすすめのブキは、
+<h1 id="weapon"></h1>
+です。
   <p><button id="retry">えらびなおす</button></p>
+</div>
   <script>
     const select = () => {
 	const randomIndex = Math.floor(Math.random() * weapons.length);
