@@ -6,12 +6,20 @@
     <script src="weapons.js"></script>
 </head>
 <body>
+  おすすめのブキは、
   <h1 id="weapon"></h1>
-
+  　です。
+  <p><button id="retry">えらびなおす</button></p>
   <script>
-    const randomIndex = Math.floor(Math.random() * weapons.length);
-    const w = weapons[randomIndex];
-    document.getElementById('weapon').innerText = w;
+    const select = () => {
+	const randomIndex = Math.floor(Math.random() * weapons.length);
+	const w = weapons[randomIndex];
+	document.getElementById('weapon').innerText = w;
+    }
+    select();
+    document.getElementById("retry").addEventListener("click" , () => {
+	select();
+    });
   </script>
 </body>
 </html>
