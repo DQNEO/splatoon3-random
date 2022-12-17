@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>スプラトゥーン3 ランダムブキ選択</title>
+    <script src="weapons.js"></script>
+</head>
+<body>
+  <h1 id="weapon"></h1>
+
+  <script>
+    const randomIndex = Math.floor(Math.random() * weapons.length);
+    const w = weapons[randomIndex];
+    document.getElementById('weapon').innerText = w;
+  </script>
+</body>
+</html>
